@@ -42,3 +42,20 @@ def download_convert_mp3(video_id):
     os.remove(original_filename)
     return mp3_filename
 
+def main():
+    # Replace this with your Spotify playlist ID
+    spotify_playlist_id = 'your_spotify_playlist_id'
+
+    tracks = get_spotify_playlist_tracks(spotify_playlist_id)
+    for track in tracks:
+        song_name, artist_name = track
+        query = f'{song_name} {artist_name} official music video'
+        videos = seach_yt_musicvideos(query)
+        if videos:
+            video_id = videos[0]
+            mp3_file = download_convert_mp3(video_id)
+            print(f'Downloaded and converted {song_name} - {artist_name} to {mp3_file}')
+
+if __name__ == "__main__":
+    main()
+
