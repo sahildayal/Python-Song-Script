@@ -1,6 +1,9 @@
+import os
 from googleapiclient.discovery import build
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
+from pytube import YouTube
+import ffmpeg
 
 SPOTIFY_CLIENT_ID = ""
 SPOTIFY_CLIENT_SECRET = ""
@@ -28,6 +31,14 @@ def seach_yt_musicvideos(query):
             videos.append(search_result['id']['videoId'])
     return videos
 
-def download_convert_mp3(vidoo_id):
-    pass
+def download_convert_mp3(video_id):
+    youtube_url = f'https://www.youtube.com/watch?v={video_id}'
+    yt = YouTube(youtube_url)
+    stream = yt.streams.filter(only_audio=True).first()
+    stream.download()
+    original_filename = stream.default_filename
+    mp3_filename = f"{os.path.splitext(original_filename)[0]}.mp3"
+    ffmpeg.input(original_filename).output(mp3_filename).run()
+    os.remove(original_filename)
+    return mp3_filename
 
