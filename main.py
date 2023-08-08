@@ -1,3 +1,4 @@
+from googleapiclient.discovery import build
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
@@ -19,7 +20,13 @@ def get_spotify_playlist_tracks(playlist_id):
     # return [(track['track']['name'], track['track']['artists'][0]['name']) for track in results['items']]
 
 def seach_yt_musicvideos(query):
-    pass
+    youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+    search_response = youtube.search().list(q=query, part='id,snippet', type='video').execute()
+    videos = []
+    for search_result in search_response.get('items', []):
+        if search_result['id']['kind'] == 'youtube#video':
+            videos.append(search_result['id']['videoId'])
+    return videos
 
 def download_convert_mp3(vidoo_id):
     pass
