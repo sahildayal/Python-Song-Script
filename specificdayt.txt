@@ -1,3 +1,6 @@
+Modify existing procedure for retrieving subplans (SELECT queries) for HIPM screen
+5. Modify existing procedure to add new funding type parameter to allow inserting/updating funding type selection on HIPM screen
+
 
 pj'
 0:02
