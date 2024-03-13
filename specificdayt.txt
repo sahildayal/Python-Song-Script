@@ -1,0 +1,676 @@
+
+pj'
+0:02
+Yeah, so this funding type change is on the screen.
+
+pj'
+0:05
+Oh, actually, I just realized I.
+
+pj'
+0:10
+Into a had an issue let's see if and 1 work.
+
+pj'
+0:20
+See, okay, it works.
+
+pj'
+0:23
+So, I think what we know is there is a change needed in the screen, right? Yeah. So to.
+
+pj'
+0:32
+For now, I mean, there are no existing plans, so I'll just click on add a plan so we can see but if you notice there is also the plan.
+
+nico
+0:43
+These are 2 separate requirements I believe.
+
+pj'
+0:45
+Our goal is to just add new field to the plan and not the cobra plan. They all go into different tables and there are different procedures involved in here.
+
+pj'
+0:58
+Mm, hmm so I think we are adding, I think, right above you only there will be a new drop down for funding type.
+
+nico
+1:09
+I think it's right below it. Yeah.
+
+pj'
+1:11
+I keep above it, but that's okay. Either way in this area essentially.
+
+pj'
+1:17
+Yeah, but I'll make sure I I mean, we have done it here right here in the middle somewhere. So.
+
+pj'
+1:23
+Uh, yeah, a big deal if you put it after this. So.
+
+pj'
+1:26
+Uh, but, yeah, whatever is in the requirements, if it is after it, then you keep it after it but regardless. So this is the screen basically, where we need to make changes. So, how do I know now, which procedures are involved in this screen is what I wanted to make sure that you both are on up to speed.
+
+pj'
+1:46
+And I have some references that I can share, but I think something you may want to try out and I think much more on you, I guess.
+
+pj'
+1:55
+Uh, and oh, actually, Ryan too. So, let me see if Ryan is available, this is their lunch hour. So I think a meeting is recorded, right?
+
+pj'
+2:08
+Yeah, so he can take a look to so, let me quickly check.
+
+pj'
+2:26
+Okay, I just send him a note if he's around, uh, I'll let him know to hop on the call.
+
+pj'
+2:31
+Uh, but so the the way I think we need is to find out. So if you notice here in the URL, it's a policy maintenance page.
+
+nico
+2:40
+And then behind the scene.
+
+pj'
+2:42
+There are all the different fields mapped so the way I usually do it is just pick 1 of those mappings and.
+
+pj'
+2:49
+Find out the field name and.
+
+pj'
+2:53
+Uh, then go backward, reverse engineer and I'll try to find out from the back end code. All the references.
+
+pj'
+3:13
+So, uh, now I already started digging through it and I have some.
+
+pj'
+3:20
+So, let me see, I can.
+
+pj'
+3:26
+Copy meeting link and give it to work on as well.
+
+pj'
+3:31
+And so the way I started digging, I just picked 1 of the fields, I think, web description and that's when I started searching in Bitbucket. So literally, what I did. I mean, for a couple of it, I knew the, the reference that it could be the clients plan related to screens.
+
+nico
+3:48
+Right. And then most of these plans are plans screens.
+
+pj'
+3:51
+When you see, like, all of that are constants, but along with these constants, there are also Constance for different procedures invoked as part of that functionality.
+
+nico
+4:03
+Right and you will usually find.
+
+pj'
+4:05
+Like, a bunch of them, but not all of them needs to be changed and not all of them apply to our requirement.
+
+pj'
+4:12
+All right, so that's where things are a little tricky and I think whoever has a.
+
+pj'
+4:18
+Access to dot net can help out actually, like, what fields are retrieved.
+
+pj'
+4:25
+Through which proc, but then on top of it.
+
+pj'
+4:29
+There can be multiple files in the layer. That might be involved too. So, hey, Ryan just quickly going over, like, how to identify the back end references for a particular change. So, we are trying to figure out, like, for funding type to show up in this list, or.
+
+pj'
+4:47
+Uh, take input from the screen what, how many procedures needs to it's changed.
+
+pj'
+4:53
+And that's what, uh, we are trying to dig into. So I thought, like, it would be good to, like, go through that process. Usually like, how we figure it out.
+
+pj'
+5:02
+I mean, you you put it in a debug mode in dot net is the easiest way essentially that you can set up a break point.
+
+nico
+5:11
+And and then you can check.
+
+pj'
+5:13
+Get out, but I know you don't have dot net set up. I was thinking that.
+
+nico
+5:17
+I set it up because right. Send me the link and I think it might take like, a few days, but that's.
+
+pj'
+5:23
+What it is, like, I mean, there is not enough time for you to, like, and if you set up, and then it would keep you away from other tasks, where you can really help us out, right?
+
+nico
+5:34
+That's okay.
+
+pj'
+5:35
+Yeah, so I am in the middle of preparing that list to.
+
+pj'
+5:39
+So, it feels like, I mean, it's better, you stay focused on other things like what you can do.
+
+nico
+5:46
+Yeah, and.
+
+pj'
+5:48
+Because most of us have dot net set up so we can leverage.
+
+pj'
+5:51
+Uh, that rather, so, yeah, that sounds good. Yeah, I mean, so it's all of it, but then, you know, it seems like a lot for you to go through and then it may be just like a.
+
+pj'
+6:03
+Rather we have other items that you can really help us out.
+
+nico
+6:07
+Right.
+
+pj'
+6:08
+So, uh, that's why I'm and keep it in your, uh.
+
+pj'
+6:12
+Lower list so far, but I'm, I'm sharing you, like, how we can get 2 things and back end code and at least your, that's why I'm in the thought of, like, if you can be.
+
+pj'
+6:24
+Helping out with the back end code, then Ryan, or make sure I, whoever has bandwidth can take over the part of things because there are other tools required to.
+
+pj'
+6:39
+Right. So that's another reason. So anyway, so, but usually, like, so that's how I just simply just pick a field name and then I just keep searching in bid bucket. So 1 of them I found column is a bill method is 1 of the actually parameters in here you will find somewhere in here right here it's a bill method. Dropdown.
+
+pj'
+6:59
+Right. So that's 1 of the fields that gets saved when you hit save right here.
+
+pj'
+7:04
+Or, like, when you navigate to the screen, basically gets loaded. So that's how you can find references. So, there is 1 page. Here I found is a clients plan in the layer and another 1 is client carriers plan info. So.
+
+pj'
+7:20
+Now, here is where things are a little tricky with the dot net and that's where, like, we learned hardware essentially.
+
+pj'
+7:29
+That we make changes to clients plan. I don't know if Mitch, you were involved. I think it's more like an employee maintenance screen. It's a similar setup. There are multiple procedures that we invoke.
+
+pj'
+7:41
+And if 1 procedure is modified, but the other is not for a different requirement. Then you get an unknown error.
+
+nico
+7:49
+Right.
+
+pj'
+7:51
+That's where things a little tricky, but I can at least.
+
+pj'
+7:55
+Share with you, like, these are different references that how you can find it and when you open a particular page and that's where you may be able to find again, there will be Constance.
+
+pj'
+8:06
+For all the fields along with the name of the procedures.
+
+pj'
+8:09
+So, I think in this page, I didn't see anything other than the insert clients plan.
+
+pj'
+8:17
+So, I see 1 as this 1 that you may need to modify, that will basically need.
+
+pj'
+8:25
+Uh, a parameter to add the new.
+
+pj'
+8:32
+Plan so now, this is dot net report. So how do you know that? So, then what you do is copy this procedure name and when you go to Bitbucket and you go to Ben DB.
+
+nico
+8:44
+Bucket and.
+
+pj'
+8:46
+Here, if you search for this insert clients plan, you will see the whole list of, like, there are 4 or 5 essentially where it's used but that's where the key thing is insert clients plan belongs to which schema package it's package. So this is where it's package body, so this is.
+
+pj'
+9:06
+Is the file you may need to change so see, now you will see you have done tons of parameters.
+
+pj'
+9:11
+And mostly refer to, I think clients plan, if you notice here.
+
+nico
+9:15
+Yep.
+
+pj'
+9:17
+So, we always add new parameter at the end of the parameter list.
+
+nico
+9:21
+Right now.
+
+pj'
+9:23
+That's why we mostly if there is no default, then you have to find where you stop with the default and you edit there. There is a default you put it next to it. So this is where you need to make a change 1 change as I can see so far.
+
+pj'
+9:38
+And that means if you are adding a new parameter, and then you do, like, this is a merge. So, this is where you would basically, of course, modify the script. And then there is equivalent file. So, if you notice it's a, I have to switch it to. So, you also need to modify.
+
+nico
+9:59
+Yeah, I know in in here, right? Oops, in.
+
+pj'
+10:04
+The plan, so this is 1 place for sure. You need to make a change.
+
+nico
+10:10
+Right, yeah.
+
+pj'
+10:13
+So that's 1, that's for insert. Now. We have to figure out the get part of it too. Like, which procedure?
+
+pj'
+10:21
+Is now, because looking at this list, I don't see any that says, get clients a plan.
+
+pj'
+10:27
+You there are few, like, get plans, but these are all like a subset not all the, the procedures return all the parameters.
+
+nico
+10:36
+Right.
+
+pj'
+10:37
+That's when I started hunting down for the web description, and then I found another page, it's called clients plan.
+
+pj'
+10:46
+So, 1 of this list here, like, I literally search for that and then I started hunting down what are the pages? So, that's when I found this client plan.
+
+pj'
+10:56
+So, in clients, a plan, I found all this block. So now you to go through all of these and I think most of them will need to be changed all 4.
+
+nico
+11:07
+Let me, let me do this list. Awesome. Thank you.
+
+pj'
+11:12
+So now, here to figure out, like, now, updates so now, if you remember Matt mentioned about proposed, and I think there is a section here proposed and history.
+
+nico
+11:24
+He proposed in history.
+
+pj'
+11:26
+So there are 3 tables enrolled in here. Mm. Hmm. So that means you have to find 3 equivalent procedures for crowd operations.
+
+nico
+11:35
+Right.
+
+pj'
+11:37
+Mostly, like, add update and get.
+
+pj'
+11:40
+Yep, so.
+
+pj'
+11:44
+So, mostly you should find it in here somewhere for, like, if you notice somewhere not, I think Ryan, just so, you know, before you jumped in, we went over this, there is an exit plan. There is add plan.
+
+pj'
+11:57
+So, the plan is a different table, different set of table completely, and I don't think our requirements are for our plans. So I think we can leave that out of scope.
+
+pj'
+12:06
+Uh, but for edge plan, I think is where, uh.
+
+pj'
+12:13
+Now, you have to figure out, like, find the procedures that is that will use for the proposed current and.
+
+pj'
+12:21
+So this 1 looks like as a proposed. So when you start hunting down for proposal, make sure that you cover those 3.
+
+pj'
+12:29
+You have to modify at least 3 procedures, or if it is a merge, it can be add update can be part of single procedure, but it there should be at least 2. right? 1 forget 1 for.
+
+nico
+12:39
+So.
+
+pj'
+12:41
+Now, this is only for update proposed there should be get proposed to somewhere.
+
+pj'
+12:46
+So, it might be somewhere here, or it might be some other.
+
+pj'
+12:50
+Uh, screen again, but that is something you can I'll let you dig into, but I just wanted to make sure that you understand, like, how to figure out the references.
+
+nico
+13:02
+Yeah, I think I, I think I have a good idea.
+
+pj'
+13:05
+Yeah, and then again, so now this is, let's say, an update clients a plan. So have to again go to.
+
+pj'
+13:15
+And then, so I'm in if you notice here.
+
+nico
+13:18
+Yep, yep. And then you.
+
+pj'
+13:20
+Search then your search will be limit restricting to this, and then you can find the reference and then once, you know, that package name, and then based on the input parameters, if you notice here, this is also another 1 where you.
+
+pj'
+13:35
+Did a whole list of parameters right? So this would be your another product that I know for sure that you have to change.
+
+pj'
+13:42
+Mm, hmm. But not seeing this will not include all the parameters again, so keep in mind. So this could be optional.
+
+pj'
+13:51
+So, that's where I think you may need Ryan or Mitch to help you out with the.
+
+pj'
+13:56
+Testing and see which probe gets invoked. So meaning like.
+
+pj'
+14:02
+If you're in 34, when you try to run it.
+
+pj'
+14:05
+Pick some random values here and try to hit sale. You can then see.
+
+pj'
+14:10
+Which procedures are getting invoked behind the scene.
+
+pj'
+14:13
+So that's another way to make sure that you all the procedures are covered.
+
+nico
+14:21
+Yeah, part of this insert update. Mm. Hmm.
+
+pj'
+14:26
+I mean, I feel like both are required, uh, because I know that's part of the screen.
+
+pj'
+14:32
+Functionality and then this 1 is a next 1. so mostly than other way I can share with, you.
+
+pj'
+14:40
+And then I will let you guys connect offline how would you guys want to work through.
+
+pj'
+14:46
+Yeah, uh, but in the same wherever you see update proposed.
+
+pj'
+14:51
+So this is, if we notice here, it's clients plan proposed so.
+
+pj'
+14:56
+I expect you're another, like, add column into this table too.
+
+nico
+15:00
+Yep.
+
+pj'
+15:03
+And so these are all the fields there. So now there is other way to look into it is.
+
+pj'
+15:08
+Now, you know, this table, so you again go to.
+
+pj'
+15:12
+And you can search how many procedures are.
+
+pj'
+15:17
+Uh, defined that uses that table and that's your other way to search all the references.
+
+nico
+15:26
+That means that means I need to add another column to this table as well. Right?
+
+pj'
+15:31
+Sorry.
+
+nico
+15:33
+I need to add another column to this table as well.
+
+pj'
+15:36
+Correct and then I think what you do need is, I think it must be this package. I believe so.
+
+pj'
+15:46
+Now, here, let's see proposed now.
+
+pj'
+15:53
+I don't think this is the package where you need to get, but that it should be somewhere.
+
+pj'
+15:59
+Not go.
+
+pj'
+16:03
+The PTs package party maybe.
+
+pj'
+16:06
+So, somewhere there should be get.
+
+pj'
+16:09
+Uh, proposed function to, or most likely actually wherever we see the update.
+
+pj'
+16:18
+There should be somewhere here.
+
+pj'
+16:23
+And the other line somewhere, there may be get most likely.
+
+pj'
+16:27
+So that's another way to find it. I mean, I don't see it here.
+
+pj'
+16:31
+Uh, but that's how.
+
+pj'
+16:36
+The reference that you may want to find out and spend some time there.
+
+pj'
+16:41
+The next thing, I think that's all I saw so far. Let me double check.
+
+pj'
+16:49
+Uh, I found 1 more here.
+
+pj'
+16:53
+But I don't think this includes all the parameters so you can safely nor.
+
+pj'
+16:58
+It says, get for plans for a specific plan, change type, um.
+
+pj'
+17:05
+Uh, but it's only subset so I think you are okay.
+
+pj'
+17:10
+To not include that new filled in this response.
+
+pj'
+17:15
+Yeah, yeah, so there are many references to go through.
+
+pj'
+17:22
+And mostly between the the.
+
+pj'
+17:26
+3 files, you should be covered, but 1, more thing I didn't see here is the history. How history is most likely just a.
+
+pj'
+17:36
+Existing records, so I don't think it goes into any other table. I can.
+
+nico
+17:40
+So, okay, yeah, yeah so that's why probably you don't see anything specific to history.
+
+pj'
+17:47
+So the plan would be once you make those changes, then Ryan would need to add a new parameter here for the new field. And then wherever this, let's say.
+
+pj'
+18:00
+Wherever this, let's update proposed plans. The plan is used.
+
+pj'
+18:06
+It's actually this a reference.
+
+pj'
+18:09
+Right here so you have to map it out as 1 of the parameters, mostly at the end, and then regenerate a proxy classes to map it out to the.
+
+nico
+18:21
+Right, but that's what I see for end to end flow perspective.
+
+nico
+18:30
+Yeah, that sounds good. Yep.
+
+pj'
+18:33
+And again, you have a recording for your reference for any questions you can always reach out.
+
+pj'
+18:38
+Yeah, sounds good. Yep. Any other questions.
+
+nico
+18:42
+Nothing so far Nope.
+
+pj'
+18:45
+Okay, cool. Yeah, so you guys can internally connect and work through these changes and then let me know if you, you can help.
+
+nico
+18:54
+Yeah, sounds good.
+
+pj'
+18:56
+Thank you yeah, I'll send the recording as soon as I get it.
+
+nico
+18:59
+Sounds good. Thank you. Have a good 1.
+
+Hammack, Mitchell
+19:02
+Today I got a quick question. I mean, you could.
+
+pj'
+19:05
+Stay on. Oh, sure. Yeah.

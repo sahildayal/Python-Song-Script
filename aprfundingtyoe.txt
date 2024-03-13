@@ -1,0 +1,998 @@
+
+percy jackson0:01
+Progress now. Awesome. Thank you.
+
+percy jackson0:04
+Yeah, no problem. So.
+
+percy jackson0:07
+Let me go back, so, in the visual solution, the way it is set up, as part of the clients are our architecture here. So, on the server side.
+
+percy jackson0:15
+There are these mainly 3 projects the data access is the main.
+
+percy jackson0:20
+A component here that has all the logic or functionality to make connections to. So there are.
+
+percy jackson0:27
+Execute procedures like is a good functions that code.
+
+percy jackson0:30
+Already written in here that we usually don't change. It's been there forever.
+
+percy jackson0:35
+Then the actual changes that we make all the APIs, we defined within this layer. So that's where you see, like a whole lot of.
+
+percy jackson0:44
+Files and classes defined in here so that's where we need to add, uh, this new functionality.
+
+percy jackson0:51
+So, we have to find a home for it. I think it would be with the client plan. So I think maybe something within I believe, and then there is a maintenance section. So, this is where.
+
+percy jackson1:03
+See, 1 of the agency region is already there. So this is where you can probably put a new class for it about funding type.
+
+DIangelo, Nico
+1:11
+Right and.
+
+percy jackson1:13
+That's what you need to do. So, now, when you go to agency region, there is a standard structure that we have to follow. There is these are all like a public and private methods that you can literally just copy paste. And all we have to do is just make sure that you use the correct constants. There are certain requirements for setting up the.
+
+percy jackson1:32
+You have to have all these constants defined for all the columns that you are going to consume.
+
+DIangelo, Nico
+1:39
+Mm, hmm and and.
+
+percy jackson1:41
+As far as the methods are concerned, mostly implementation is through the private method. So usually you will see, like a get methods.
+
+DIangelo, Nico
+1:48
+Yeah, yeah, again the standard implementation.
+
+percy jackson1:51
+That causes the storage procedures, as I said, like, there is a data access layer. So that's where we have this functionality to call the storage procedure.
+
+percy jackson1:59
+So, I mean, these are all again standard all you are doing is making this field mapping changes. Ultimate structure remains the same and same thing that is so here is just a guy region, but you also need methods to add or update. So that's where probably you need to refer to, like, say there is a delete. I don't think we need to delete. So we don't have to worry about delete.
+
+DIangelo, Nico
+2:22
+What do you do need.
+
+percy jackson2:23
+I think insert and then the update as well.
+
+DIangelo, Nico
+2:27
+Yeah, so that means we need 3 different.
+
+percy jackson2:30
+Features 2 in the back end. So, and then.
+
+percy jackson2:35
+This particular work flow will invoke those procedures literally or functions. However, it makes more sense.
+
+DIangelo, Nico
+2:42
+Right.
+
+percy jackson2:44
+These are all the back end work that has to be done and I think that is something you can keep working through it. And of course, between Ryan, and you guys decide how we want to distribute and work it out. But these are the work. I don't think so. You can do because anywhere this set up.
+
+percy jackson3:02
+It would require dot net solution and set up. So that's why I feel like.
+
+percy jackson3:08
+You can certainly get involved and work with Ryan. So you understand how things are interconnected.
+
+DIangelo, Nico
+3:13
+Uh, feel like it would be good.
+
+percy jackson3:17
+For Ryan to take this action item.
+
+percy jackson3:21
+And then, of course, you can be involved to, uh.
+
+percy jackson3:25
+And you can help them out as needed. Yeah, sounds good. All.
+
+Leo Vladez
+3:29
+Be available for any questions or anything.
+
+percy jackson3:31
+Yeah, I mean, that's why I just wanted to make sure, like, high level, you understand so this is a layer now and and then so that's where, let's say you set up a new funding type method, then you move on to the next level, which is the server layer this is all the API is basically.
+
+percy jackson3:47
+Defined so this is the 1, uh, are exposed.
+
+percy jackson3:51
+Through the surveys essentially so in here again, you will find the similar structure here so you will have to find where it makes more sense. I think this 1 would go to maintenance. So, then in in maintenance, I believe you would find some sort of location to find the home for it. I think we need to spend some time and.
+
+percy jackson4:11
+Figure out, but it's nothing in here. It's more about adding a function in the maintenance service.
+
+percy jackson4:17
+And then 1 of these, I think, uh, let's see which 1 would make more sense.
+
+percy jackson4:24
+Maybe product type surveys or.
+
+percy jackson4:27
+I don't know if it is best maintenance service, but 1 of these places, I think to find out or you can check or maybe in the let's see. Maybe it's good to be part of service you can follow. I think what I feel like, you can just follow that agency region structure and just.
+
+percy jackson4:47
+Find wherever in this 1 of these files, you will find agency actually and that's when this 1 can be handy. So it is under the business maintenance service has the agency region.
+
+percy jackson5:00
+So you can basically follow the same thing. So, in here, somewhere in the maintenance service, there are APIs for individual sections. So now, if you see here, the bundle is the agency region is here. So, you can have a section for funding type and then you can have all the method to, like, what.
+
+percy jackson5:20
+Where you have get insert update delete, and this will be the API label that is exposed to outside world.
+
+percy jackson5:30
+Now, this is we are still talking about the maintenance screens, so this is a bare minimum work that we have to do.
+
+DIangelo, Nico
+5:36
+Mm, hmm, no, you.
+
+percy jackson5:38
+Be a way to set up the code in the.
+
+percy jackson5:42
+So, once you have this setup done, then you have to use the API tools, service, utility extension. It may not work. I'm not sure I don't have it running. There are steps required to.
+
+percy jackson5:55
+Uh, uh, run it, but.
+
+annabeth chase
+5:59
+1, quick step there are you gonna add those operation contracts to the interface?
+
+percy jackson6:06
+Yep, that's the maintenance service. That's where you would need to add those. Define those too. Correct?
+
+percy jackson6:12
+So, similar similar structure, you to follow through I'm internal service, put it in maintenance surveys, then you have the methods, and then you would be able to build the solution, then you go to extensions and generate proxy classes that will put the proxy classes in the client's side, I think there is a common section here.
+
+percy jackson6:34
+In the this layer, I think is the 1 that is all dynamically generated objects. Once you run this service utility, it will put update the file.
+
+percy jackson6:45
+Wherever I think is the, the services in 1 of these areas.
+
+percy jackson6:50
+Oh, sorry WTF client. I made a mistake in the client section here. This will be auto generated and then you don't have to do anything in here. These are all auto generated code anyway.
+
+percy jackson7:04
+But this is just more for reference once you see all the files in here updated, that's when you will see references in the library layer but then in the UA library layer, right? I think it's since I think it's all under maintenance, you will see another regions region file. So you, I expect that you would need to add a new pending type.
+
+percy jackson7:25
+File, and that's where the actual fun begins for the this is.
+
+percy jackson7:29
+Where you have to follow through how these properties are defined you to define properties for the funding type.
+
+percy jackson7:36
+And these are the ones that would be mapped to the page.
+
+percy jackson7:41
+And that is the reference that you see in the other code, this is the easier way we already have it open. So, this is the reference that you see for.
+
+DIangelo, Nico
+7:49
+Individual.
+
+percy jackson7:50
+And these are the field names that you get it that bind property is basically the property name from here. So, this region code refers to the region code.
+
+percy jackson7:58
+So, that's how the fields that died.
+
+percy jackson8:03
+From back end to the front end. So yeah, so these are all these things involved in this. So I just wanted to make sure that you are aware. Now, this is just about maintenance screen. So, once you go through these setups, so you define the agency region and there are, of course, methods for the similar, get the crowd operations.
+
+DIangelo, Nico
+8:22
+Yeah, of course, we don't have a delete, uh, but.
+
+percy jackson8:25
+These are like a standard way to structure. This is mostly copy paste and all you have to do is change the agency region to funding type and you should be able to set it up quickly.
+
+annabeth chase
+8:36
+Um, is it out of scope to.
+
+annabeth chase
+8:41
+Extract some of that out to a base class.
+
+annabeth chase
+8:45
+If we're, uh, if it's copy paste, you know, for delete and just make it a generic base.
+
+percy jackson8:54
+Yeah, this is yeah, this is a standard buttons so we already have a generic base actually, so this 1.
+
+percy jackson9:00
+It's just implementation.
+
+annabeth chase
+9:03
+Right, but you said for like, the delete, like, it's a, you know, delete type agency region like you open that data access backup.
+
+annabeth chase
+9:11
+Mike, so you've got, you know Yep.
+
+annabeth chase
+9:16
+Delete delete self, and it's like that if that if that whole line there, it's the only thing difference on line 5 and 11 is that agency region type. Mm. Hmm. You could just extract that out to the, the base and just, um.
+
+percy jackson9:30
+Yeah, no, so that we don't want to do that, because that's still unique. I just use agency region reference.
+
+percy jackson9:37
+But the, this is still the funding type would still be unique.
+
+percy jackson9:41
+As a separate independent functionality so you don't need to do anything like that I don't think so.
+
+percy jackson9:48
+Like, if you look at the, any other item in the layer, they are all set up like that. Whatever is the class that is needed. You have that it's pretty much the standard that we follow.
+
+annabeth chase
+10:03
+Right but it would just be like, uh, you know, data portal, delete self of type T mm. Hmm.
+
+percy jackson10:09
+I agree with you mean, but.
+
+annabeth chase
+10:11
+Yeah, so we don't want to do I mean, I know I know we're not going to go refactor all of this stuff, but.
+
+percy jackson10:17
+Exactly, so now you, I mean, it's up to you, it's a very good point and if you see that kind of opportunity and do it doing it, like, as a generic type by all means, go for it.
+
+percy jackson10:30
+Yeah, and that's that's what it's up to you now. Like, I'm just sharing high level how to set up and most of the screens are set up like this. But it's but it doesn't mean that you.
+
+percy jackson10:42
+To follow this approach, I'm just sharing as a guideline here. Like, if you just have something for reference, but yeah please feel free. However, you think would be better to implement.
+
+percy jackson10:53
+Yeah, and but, I mean, these are pretty much like if you notice like, this is exactly the point. Like, if you open any of these methods, you will see very similar.
+
+percy jackson11:04
+A structure across, so most likely, you may end up doing this, but if you see any other way of doing it, and do you want to do it that way? Uh.
+
+percy jackson11:15
+You are welcome to do it.
+
+percy jackson11:18
+And so, once now, then you set set this up that's where, like, these maintenance structure. So I think there is some limitation here, uh, because we have maintenance control, but you can take a look at this maintenance control and see.
+
+percy jackson11:32
+If there are any opportunity to make it more generic type, but these are all like, different methods that you would need like so, see, there is item type and list type. So, this is what essentially is designed that.
+
+percy jackson11:45
+Generic types are essentially designed to already.
+
+percy jackson11:48
+And all you are doing is just defining, like, if it is, someone tries to save it on the.
+
+percy jackson11:56
+Then all you are passing, it is a same method. You don't write a sales method. Actually if you notice here, it's you basically is a.
+
+percy jackson12:05
+Part of a base class, and it will in invoke insert.
+
+percy jackson12:10
+Because that is the implementation.
+
+percy jackson12:14
+So, that's that's kind of a code is already set up. That's the framework.
+
+percy jackson12:20
+So that's why, I mean, it's, it's a very.
+
+percy jackson12:26
+Limited line of code, but behind the scene, it's already set up.
+
+DIangelo, Nico
+12:30
+Right. And then it has all these functionality. So you.
+
+percy jackson12:33
+Don't need to allow delete equal to falls and you don't need a delete basically.
+
+percy jackson12:38
+And that's explicitly like, they mentioned that they don't want to delete anything. So we should not have any delete behavior on the.
+
+percy jackson12:48
+So, yeah, those are all like, something is a learning curve essentially like how this maintenance grid is set up.
+
+percy jackson12:54
+And then you can certainly make a.
+
+percy jackson12:58
+Adjustments for this funding type of requirements as needed.
+
+DIangelo, Nico
+13:02
+Right.
+
+percy jackson13:05
+So, yeah, so that's all about the funding type essentially the maintenance screen but now, if once the maintenance screen is ready, the field is ready, then it's about the real implementation. So, let me now go to the client and let's see if I can find any particular. I actually don't know.
+
+percy jackson13:21
+I can show you.
+
+percy jackson13:24
+1 of the screens and hope it work but in the the real requirement is they want to see this filled in the heap on screen. So when the client, when you select a client, you go to health and benefits and health insurance policy maintenance. That's where you would see.
+
+percy jackson13:39
+This looks like this is not there are no plans plans configured in here. But this is where I think there is another.
+
+percy jackson13:48
+Somewhere where we need to have a dropdown.
+
+percy jackson13:51
+And so.
+
+percy jackson13:55
+I don't know where they wanted to put it. I didn't go ahead.
+
+DIangelo, Nico
+14:00
+Right below the view only web indicator.
+
+DIangelo, Nico
+14:03
+If you want, you can try the client 172 or 174, and they have a plan.
+
+percy jackson14:11
+Okay, 1994 there we go. Good Thank you.
+
+percy jackson14:15
+Yeah, uh, health insurance policy maintenance.
+
+percy jackson14:23
+Oh, you are in which environment that matters to.
+
+percy jackson14:29
+But, okay, here is what it is uh, we can also.
+
+DIangelo, Nico
+14:34
+The screen.
+
+percy jackson14:36
+Yep, so this is a big screen essentially and so at someplace here they want to see the new drop down.
+
+percy jackson14:45
+So you said, like, under where.
+
+DIangelo, Nico
+14:50
+Well, I'm just looking for 3rd. Oh, hold on. So.
+
+percy jackson14:54
+It should be defined here in the requirements. So it's more Ryan, I think, for you to follow through essentially, uh, indicated, uh, located under the view, only web indicator on all plans.
+
+annabeth chase
+15:14
+Left bottom column.
+
+percy jackson15:17
+There you go right below this 1, right? That's where I, it looks like they are decided to put this new field. So then it would be similar looking drop down with and they want this like a.
+
+percy jackson15:30
+Uh, code dash description as the that's the standard pattern we follow. So, that's what I think we decided that we will have. I mean, these are all dynamic lists.
+
+annabeth chase
+15:43
+Sorry, Courtney on the requirements. The table didn't list a.
+
+percy jackson15:47
+Yep, that's the change. Basically we made yesterday so Chad is in the middle of updating those details, but we do have a code and description combination. Now.
+
+annabeth chase
+15:58
+That's like this. So, what is the I mean, is it going to be an ID column too?
+
+percy jackson16:04
+Yeah, no, so there is no ID column. That's how so, what we need is there is a clients supply table. So, let me go in the back end. Now.
+
+percy jackson16:14
+Uh, so there is what we need, so now.
+
+percy jackson16:18
+So that's just a, basically, that's where we need a field. Now. How do we get to there? That's where you need to look at these tables. So now there is a new requirement that I expect to work through.
+
+percy jackson16:32
+And, of course, they, he may need some help. So, Ryan and Mitch, you may need to get involved there. But in the client plan.
+
+percy jackson16:39
+Uh, table, that's where we are adding a new field called CS, funding, type code or something.
+
+percy jackson16:47
+Okay, and that's in the same schema. We are adding a new table funding type so that would be the foreign key.
+
+percy jackson16:55
+And it's a required field so there is also another user story where.
+
+percy jackson17:01
+Uh, we are going to run a script for all existing data to update a default value.
+
+percy jackson17:06
+So that's also another requirement. So, if you look at the requirements on user story, 1, and if you look through refer to the list, there is 1 value called undefined. So, I think.
+
+percy jackson17:19
+The plan is to when we roll out or ready to roll out these changes to production, we'll turn out 1 bulk update.
+
+percy jackson17:27
+To assign undefined to all the plans, because going forward, this would be a required field.
+
+annabeth chase
+17:35
+So, I imagine it's just like a standard at this point. But why use, uh, like a 3 character code instead of just an identity or identity.
+
+percy jackson17:45
+Field, uh, because that's pretty much the standard and that's why we just, uh, like, if you notice here, most of these are set up like that. So that's why just pretty much following that pattern.
+
+percy jackson17:57
+So, it's consistent.
+
+percy jackson18:01
+Because that's what the business users are more familiar with.
+
+percy jackson18:04
+Less learning curve for them too and that's why, uh, initially, I think that's how it started and that's why you see in the requirements. It's nothing is defined. Here. It's all I think we're more considered as an identity column.
+
+percy jackson18:23
+Um.
+
+percy jackson18:26
+I mean, we can do that it's but I feel like it's more consistent. It's better to stay consistent with how other screens are set up.
+
+annabeth chase
+18:35
+Yeah, I mean, at this point, it's not a huge deal, but.
+
+annabeth chase
+18:39
+You know, if you're going to have the foreign key.
+
+annabeth chase
+18:42
+Like, a bar chart, like, you might as well just make the funding type, the column, the primary key, and just use this.
+
+annabeth chase
+18:48
+The whole funding type, instead of a 3 character bar code. If you use the hint, it saves a little bit of space, but.
+
+percy jackson18:57
+That's right actually and I'll let you also decide on that 1. I think we may just need to work on the requirements. Um.
+
+percy jackson19:07
+But, let me see, we can review some of the existing, or maybe you can review and come up with your suggestions. Essentially. If you think we can come up with some sort of like those foreign key. Let's see if we have.
+
+percy jackson19:22
+We have a sub plan code clients a plan now.
+
+percy jackson19:33
+There are differences. Let's see it.
+
+percy jackson19:39
+Yeah, I don't think we have any of those type of things. We have those kind of like a sort of indicators mostly, but we never used those kind of ID column.
+
+percy jackson19:58
+Yeah, most of the time that are like, indicator or code as you can see. So, but yes, certainly I mean, you can.
+
+percy jackson20:06
+Review and I think it's ultimately coming down to between YouTube, I guess, for the setup perspective and SMS may also have some feedback there. So maybe something to also run it by maybe Matt, and confirm with him. If he has any opinion there.
+
+percy jackson20:25
+But I would say, like, yeah, maybe something you can just do some sort of quick research and confirm before going too far.
+
+percy jackson20:33
+Now, is the opportunity to come up with any approach.
+
+annabeth chase
+20:37
+Yeah, I mean, I don't I, I don't care too much.
+
+percy jackson20:43
+Easier for well, yeah, you know, to follow to follow the standard there then it's fine.
+
+annabeth chase
+20:48
+I'm just curious.
+
+percy jackson20:48
+Yes, if there's absolutely I would say, like I met is the right person actually, so you can double check with him. But I'm as far as I mean, as long as we are not changing a whole lot of like a functional behavior, because.
+
+percy jackson21:00
+1 thing we have to always keep in mind is the end users. If it is new to them, they may get confused.
+
+DIangelo, Nico
+21:07
+Hello.
+
+percy jackson21:09
+Is as long as if there is limited, I mean, for this 1, particularly I don't think that would be a problem. It's new and we just tell them.
+
+percy jackson21:19
+Use it this way and hopefully it won't be a problem.
+
+percy jackson21:23
+And, but, yeah, something to double check with Matt and see if he has any.
+
+percy jackson21:28
+Suggestions there, and you can circle back offline with him and or work.
+
+percy jackson21:34
+For him and confirm.
+
+percy jackson21:37
+Uh, yeah, so that's basically where you expect this new field added and that's where I think the things become a little tricky. So, now, what we have to do is, from the standpoint, we do need to have a.
+
+percy jackson21:50
+Uh, identify all those procedures involved on this particular screen to patch or.
+
+percy jackson21:59
+Add update the selection, so you need another database work where you need to modify the existing procedures.
+
+percy jackson22:07
+Tied to this particular screen and, uh.
+
+percy jackson22:11
+I think, I don't know of, and, I mean, which the name of the product, but that is something you can research.
+
+percy jackson22:18
+Uh, I don't know if there is any.
+
+percy jackson22:22
+Maybe insurance, let me see if insurance cancel reason maybe the right word.
+
+percy jackson22:34
+So, let me see, there is a way to get to that.
+
+percy jackson22:37
+Big bucket search and you just say.
+
+percy jackson22:43
+Insurance and some reason, and you may see the reference about how.
+
+percy jackson22:48
+Many pages come up, so there are 8 files, but the 1, this 1 mostly would be the policy maintenance.
+
+percy jackson22:58
+But the actual tied to it is insurance cancel reason input. Right? So this is the field.
+
+percy jackson23:08
+Uh, I think policy maintenance is the page.
+
+percy jackson23:13
+Right here insurance can salaries and clients plan basically is the.
+
+percy jackson23:19
+The associated with it it seems so.
+
+percy jackson23:23
+I think this is the place where you probably need to add a funding type.
+
+percy jackson23:28
+Reference in the client plan.
+
+percy jackson23:32
+And now, if let's say if this is the page, then there should be something in the.
+
+percy jackson23:38
+Layer that you need to change to so clients a plan when you actually search for clients plan, you will see the references.
+
+percy jackson23:49
+In the layer right there. So this is where you will find the procedures.
+
+percy jackson23:55
+Most likely that will have, like, add update, supplant type thing.
+
+percy jackson24:00
+Clients plan updating the clients are plans are right there so you need to.
+
+percy jackson24:07
+Make a change to these procedures to add a new funding type field. It seems.
+
+percy jackson24:16
+I mean, I'm, I'm not 100% sure. I mean, you to take a pick which 1, but looks like this with the name. It makes sense. So what you can do, we can find out actually quickly here. So going to.
+
+percy jackson24:29
+Ben DB, now report and then you search.
+
+percy jackson24:34
+So you will find the definition in the body. So, this is where you can actually check it out. What are the parameters in the update clients a plan? So these are all the fields that.
+
+percy jackson24:48
+Basically are in this function, so you would be adding.
+
+percy jackson24:53
+Uh, usually we added the bottom of the list, the new.
+
+percy jackson24:57
+What are the input, uh.
+
+percy jackson25:01
+Cs funding type code or something.
+
+percy jackson25:04
+And that is a conversation, uh, by default. Do we want to keep it.
+
+percy jackson25:10
+To make it backward compatible we still need by default is defined or defined as a value. So you would pass in the.
+
+percy jackson25:20
+Default is undefined as a value.
+
+percy jackson25:24
+But select 1, I think is also unknown, or is something we are also thinking about it because now, if anyone tries to add the plan, this is this new funding type is a required field. So.
+
+percy jackson25:39
+That's again, more changes, Ryan that once you go through the steps, I mean, it may be, I don't believe this could be done in 1 Sprint. It would be more.
+
+percy jackson25:48
+Sprint or 2 out I guess so, by the time you will be caught up with the requirements and you will know what exactly is required.
+
+annabeth chase
+25:54
+I mean, if we're talking 1 to 2:2:sprints out, I might.
+
+percy jackson26:00
+Beyond leave oh, now you're planning on going on vacation.
+
+annabeth chase
+26:04
+Spot paternity leave, but it's a.
+
+annabeth chase
+26:08
+April 6 is the due date, so.
+
+percy jackson26:12
+Yeah, yeah.
+
+annabeth chase
+26:14
+Yeah, anytime in mid March.
+
+percy jackson26:17
+Okay problem no worries whatever you can get get done and then, of course, 1 of us will take over from wherever you left off. So no worries.
+
+percy jackson26:27
+Yeah, thanks for bringing it up. Yeah, so but at least whatever you can get done and whatever is not done. I mean, no, no worries at all because Paul already mentioned that it's.
+
+percy jackson26:39
+Something is needed, but it can be used as like a a.
+
+percy jackson26:43
+For our learning process as well and then I think Mitch would be involved too. So maybe matrix would come on mostly on you.
+
+annabeth chase
+26:51
+Leo, I mean earlier yeah. Yeah. It's really familiar with dot net too, so.
+
+percy jackson26:58
+I don't think he'd have any. Yeah, probably yeah, I can transition over to Leo that in that case.
+
+percy jackson27:03
+But right now, I think, in at least particularly for this Sprint looks like Leo has something on his plate. And, I mean, all of us do, but I feel like it's more good for you to get involved here. And you may be able to spend some time with you and.
+
+percy jackson27:17
+Let's make some progress on this story.
+
+annabeth chase
+27:22
+Um, 1 thing, I don't know.
+
+annabeth chase
+27:25
+We haven't told him.
+
+annabeth chase
+27:29
+Scheduled for an hour, um, yeah, if we're.
+
+annabeth chase
+27:34
+If we're done with all that, I did have a question, and it would benefit the hill and everybody else too. I think, um, debugging I never did figure out like.
+
+percy jackson27:47
+2 code. Oh, yeah I can show you. Oh, so it looks like see, the list was loaded. Uh.
+
+percy jackson27:54
+So this is a service utility actually on my, I don't know my other screen on here when I clicked on the let me cancel it. And I'll show you the debugging steps. What I, what? I usually do.
+
+percy jackson28:06
+So but, yeah, before moving on to the debugging step, I think, I mean, we are mostly covered, right? So that's the other thing, like, now, you know, like there is this new field and again, the process wise is the same. You make a change in the database script. I think there are 3 or 4 scripts. So, there is plenty in here that you have to be involved.
+
+DIangelo, Nico
+28:26
+In that case, right?
+
+percy jackson28:28
+Yeah, it would be a good learning call because look, let's look at this 1st, and you to make sure that all of these work seamlessly, it's part of the regression testing. This would be a heavily used screen. So in 1 of the part of critical transactions.
+
+percy jackson28:42
+For you to also make sure that we don't break anything. I know if anything is changed, we do.
+
+percy jackson28:47
+Functional and regression testing to ensure everything is still functional.
+
+DIangelo, Nico
+28:51
+Expected right.
+
+percy jackson28:53
+Okay, but, yeah, so that's all become part of the natural language processing in a way. Like, once you are up to this level.
+
+percy jackson29:00
+So, nothing unusual here so far.
+
+percy jackson29:05
+And, yeah, and then you make a code change here and then same, same, same process. You need to.
+
+percy jackson29:10
+Once you put a fill in here, then you generate proxy classes and you will find a particular service. That's what you get it from the list. So, that's what, like, when I put it here in the service utility, there is this list comes up and 1 of the.
+
+percy jackson29:26
+List here is about the particular service if this would be most likely service, and you just click generate and it generates the Pro regenerates the proxy classes.
+
+percy jackson29:35
+But again, this is something whoever has dot net and.
+
+percy jackson29:40
+Correct version of that that they can do it. Otherwise this can be a bit of complex process.
+
+percy jackson29:48
+But once that's done, then you will see the new field available in the, and then you can map it over.
+
+percy jackson29:55
+In the screen here, and of course, make a change in the library record, as I said earlier.
+
+percy jackson30:01
+So, same, same, same process make change in the make changes in the.
+
+percy jackson30:07
+Make changes in the changing the changes in the library layer, and then it will be available in the web layer here wherever you have the particular page defined. So easiest way to find the path for that is if you are looking at a particular screen.
+
+percy jackson30:23
+Uh, so this is P, I. policy maintenance so that means under policy maintenance is the screen that you should see here policy.
+
+DIangelo, Nico
+30:32
+And.
+
+percy jackson30:34
+Yep, and same with the agency region. So, like, it's under too. I know. So agency regions is here too, and then you can map it out. Whatever is needed in the.
+
+DIangelo, Nico
+30:45
+Cs file right?
+
+percy jackson30:48
+Yeah.
+
+percy jackson30:51
+So, now that that's how basically it's end to end flow, set up once everything is set up. And then when you hit sale.
+
+percy jackson30:58
+You should be able to make sure that you can see your changes.
+
+percy jackson31:02
+Getting saved and when you retrieve, you should see the correct value is being retrieved.
+
+percy jackson31:07
+So that's another product I think I didn't mention here, but I think somewhere here in the same file, this clients plan, I think you should see 1 for the plan or something. It should be in this list somewhere here.
+
+percy jackson31:22
+There are many of them, so that's where things maybe little regression testing is needed because there are, let's see. So right here this is about just for.
+
+DIangelo, Nico
+31:31
+Process.
+
+percy jackson31:33
+So, the same page is used for multiple purposes for is used for multiple purposes.
+
+percy jackson31:40
+So, you have to make sure the changes are backward compatible. Sometimes what we do is we add a new field in the update, but we missed in the insert and you will get nice.
+
+percy jackson31:51
+Unexpected error, and that's when, you know, like, you also need to add a field in this another too.
+
+percy jackson31:58
+So those kind of fun once you start testing, you will know. And if there are any more of such kind of procedures needed, then once you start testing, you will mostly identify those.
+
+percy jackson32:10
+Okay, and again we'll circle back for the script and how to run it and what to run it. And Mitch, I think you have done it, you use sequel bus utility so you may need some details share with.
+
+Leo Vladez
+32:26
+Put that data yeah, I had him used that before, but I can help.
+
+percy jackson32:31
+Yep. Cool. Thanks. Yeah, and you can always reach out to me.
+
+percy jackson32:37
+Sounds good. Yep, so now, for the troubleshooting perspective, uh, what we need on dot net so.
+
+percy jackson32:45
+Ryan there is a.
+
+percy jackson32:49
+That has to be restarted so every day, you know, there is a.
+
+percy jackson32:54
+Oh, I did. Mine is close, but, you know the drill, right? We have to.
+
+annabeth chase
+32:59
+Yeah, I didn't today for.
+
+percy jackson33:02
+For some reason, yeah, but once you do that, then your is functional and then you of course how to build your solution. And then what I do, I just build my solution once offline and then I just go to local hosts 98 and then I just launch dot net. I, I don't do anything with visual studio.
+
+percy jackson33:23
+Like, I have dot net page loaded on my, and then what I do is I go to debug and attach to process.
+
+annabeth chase
+33:32
+Okay.
+
+percy jackson33:33
+The Yep, yeah so you have to make sure you check this box show process from all users and then.
+
+annabeth chase
+33:43
+Wp and I tried doing that. I never actually.
+
+percy jackson33:47
+There are 2 of them. Yeah. So make sure there are 2 of them. So right now it's still in the middle of, like, uh, I have triggered the build so it won't work and because I just click the locals 98. so it's.
+
+percy jackson34:00
+There we go, so now, since this is loaded, now, if you go to debug and attach to process, you should see 2 of them 1 for the client, and another 1 for the server right? There.
+
+annabeth chase
+34:15
+So that 1.
+
+annabeth chase
+34:18
+Automatic okay, so you looked specifically for the managed.
+
+annabeth chase
+34:25
+Yep, dot net for X code.
+
+percy jackson34:31
+And this is how I help my site set up so that's why you see this.
+
+percy jackson34:37
+My website and application pool name is matching. Uh.
+
+percy jackson34:44
+Those set up, so in.
+
+percy jackson34:47
+Let me bring it up. I mean, you must have gone through these steps to.
+
+annabeth chase
+34:54
+Both yeah, I got all that and I just never I never saw that.
+
+annabeth chase
+34:59
+Process pop up it may have just been because I forgot to check that checkbox.
+
+percy jackson35:03
+Show all processes. Oh, okay. Yep. Yeah. No, I just with 1 of the team member yesterday members yesterday and.
+
+percy jackson35:11
+It was the same issue for him. It showed up and click on show process from all users.
+
+percy jackson35:17
+And so that's how I find it easier, because you don't have to always troubleshoot everything. So I just launched the page. I never get to the screen where I want the to troubleshoot. And then I attach to the process. So, it's I'm only focusing on that just chunk of it.
+
+annabeth chase
+35:36
+So that is the other process is the WC.
+
+percy jackson35:45
+Services that right Yep. So, yeah, the other 1 was the back end API. So now that's where these things are important. So when you are debugging the client side of code, you attach to.
+
+percy jackson35:59
+The dot com.
+
+percy jackson36:02
+Process if you want to troubleshoot anything on the back end API, the server side of code, then you attach to the server site.
+
+percy jackson36:12
+Or you can do both.
+
+annabeth chase
+36:16
+And you can do both. Oh, good.
+
+percy jackson36:18
+And you want to make sure end to end flow and you want to set up a break 1 and test you can do it.
+
+annabeth chase
+36:26
+To Yep.
+
+percy jackson36:31
+So, yeah, sometimes you want to understand how the flow works and but here, like, behind the scenes, so many calls are made to Ben DB. So a lot of time what I usually do for troubleshooting any specific 1, I go to data access layer.
+
+percy jackson36:47
+And then I, I find the method Oracle within the Oracle data master. There are procedures to execute a particular.
+
+percy jackson36:56
+Uh, Brock, this is all dynamics are all storage procedure is the, uh.
+
+percy jackson37:03
+Is the function so what I do is I just go to the lowest level so this is the 1 and I set up a break point here. So that way I traced through.
+
+percy jackson37:12
+Which particular procedure is being invoked, because I think.
+
+annabeth chase
+37:16
+Sorry.
+
+percy jackson37:17
+I said, right yeah. That's the easiest way to do it. And there is 1, so sometimes it could be in the Oracle master sometime it's part of the transaction. So there is also a similar set available as part of the transaction. So, you may need to set up a break point on, on both places.
+
+percy jackson37:32
+There is a similar method available here to.
+
+percy jackson37:36
+As part of the transaction, so calls for a procedure so sometimes it's part of the transaction, then you will.
+
+percy jackson37:43
+Uh, the process would be calling this functionality.
+
+annabeth chase
+37:47
+Okay.
+
+percy jackson37:48
+And, uh, that's where I mean, once you are trying to figure out, like, how many.
+
+percy jackson37:55
+Procedures are involved and during this lookup, that's how.
+
+percy jackson38:01
+To find out easily, I mean, it's still a tedious process, but because I know for the home screen that are at least 8 to 10 procedure calls.
+
+percy jackson38:11
+Being made when you hit sale so there are a bunch of lookups happen behind the scene.
+
+percy jackson38:20
+And that's where you have to make sure you pick the right 1 to add this new field.
+
+percy jackson38:32
+Okay, oh, yeah, that's all. I wanted to share actually. And.
+
+percy jackson38:36
+Again, you can always reach out if you have any questions, or you need more information.
+
+percy jackson38:43
+Any questions okay if not, let me stop the recording.
