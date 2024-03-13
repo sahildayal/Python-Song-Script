@@ -1,1 +1,1 @@
-inSearchCode IN PAI.FUNDING_TYPE_REF%FTR_CODE,
+l
