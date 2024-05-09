@@ -1,0 +1,1 @@
+=CONCATENATE("UPDATE PAI.CLT_SUBPLAN SET CS_FTR_CODE = '", IF(C1="Community Rated", "COM", IF(C1="Level Funded", "LVL", "")), "' WHERE (CS_CLT_ID, CS_SUBPLAN_CODE) IN (('", A1, "', '", B1, "'))")
